@@ -10,6 +10,7 @@ export class JobComponent implements OnInit {
   public action: any;
   public innerHeight: any;
   public listingHeight: any;
+  errorMessage:string;
 
   constructor(
     private storeValueService: RepositoryService

@@ -20,11 +20,8 @@ import { BlogComponent } from './blog/blog/blog.component';
 import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { BlogArticleComponent } from './blog/blog-article/blog-article.component';
 import { ProgramDataanalystComponent } from './programs/program-dataanalyst/program-dataanalyst.component';
-import { JobComponent } from './careers/jobs/job/job.component';
 import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.component';
 import { JobsPanelComponent } from './careers/jobs/jobs-panel/jobs-panel.component';
-import { JobsSearchbarComponent } from './careers/jobs/jobs-searchbar/jobs-searchbar.component';
-import { JobsListingComponent } from './careers/jobs/jobs-listing/jobs-listing.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'en/home', pathMatch: 'full' },
