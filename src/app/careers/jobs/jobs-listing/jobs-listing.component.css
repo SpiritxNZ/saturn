@@ -1,0 +1,70 @@
+.scrolly {
+    overflow: auto;
+  }
+  
+  .err-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    margin-left: -100px;
+    margin-top: -50px;
+  }
+  
+  .job-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+  }
+  
+  .card .company-icon img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .company-content {
+    width: 100% !important;
+    border-bottom: 1px solid #d0d0d0;
+  }
+  
+  .company-content-brief {
+    padding-left: 0.5rem;
+    float: left;
+  }
+  
+  .favorite-day {
+    float: right;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+  
+  .job-list-header {
+    border-left: solid 0.125rem #0073b1;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, .15);
+    align-items: center;
+  }
+  
+  .header-first {
+    flex-grow: 1 !important;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  h3 {
+    cursor: pointer;
+  }
+  
+  h3:hover {
+    color: blueviolet !important;
+  }
+  
+  h3:active {
+    color: green !important;
+  }
+  

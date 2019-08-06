@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-card class="content crad" [ngStyle]="{'height.px': listingHeight}" style="overflow-y: auto">
+      <mat-card-header>
+        <mat-card-title>
+          <div style="color:red; font-size: 20px;" *ngIf="errorMessage">
+            {{errorMessage}}
+          </div>
+          <div *ngIf="jobDetails">
+            {{jobDetails.title}}
+          </div>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <div>
+            <span *ngIf="jobDetails">{{jobDetails.location_name}}, NZ</span><br>
+            <span *ngIf="jobDetails">
+              <span *ngIf="jobDetails.rate_low">{{jobDetails.rate_low | currency:'CAD':'symbol-narrow':'0.0'}}</span>
+              <span *ngIf="jobDetails.rate_low && jobDetails.rate_high"> - </span>
+              <span *ngIf="jobDetails.rate_high">{{jobDetails.rate_high | currency:'CAD':'symbol-narrow':'0.0'}}</span>
+            </span>
+          </div>
+          <div>
+            <span *ngIf="jobDetails && jobDetails.timeType_name != ''">{{jobDetails.timeType_name}}</span><br>
+            <span *ngIf="jobDetails && jobDetails.principal != ''">{{jobDetails.principal}}</span>
+          </div>
+          <div class="job-apply" *ngIf="jobDetails">
+              <a href="{{jobDetails.link}}" style="text-decoration:none" target="_blank">
+                <button class="job-apply-button">
+                  <span>Go to the Source</span>
+                </button>
+              </a>
+            </div>
+  
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <article>
+          <div [innerHTML]="jobDetails.description | safeHtml" *ngIf="jobDetails" style="padding:3rem;"></div>
+        </article>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

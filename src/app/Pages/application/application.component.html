@@ -1,0 +1,152 @@
+<section id="section1">
+    <div class="jumbotron-fluid">
+            <h1 class="j1">{{'applicationtitle' | translate }}</h1>
+        </div>
+</section>
+
+<section id="section2">
+    <div class="container">
+        <div class="row" id="section2toprow">
+            <div class="col-5 d-none d-md-block" id="showinterest">
+                <div class="card">
+                <div *ngIf="divname == '1'; then styleone"></div>
+                <div *ngIf="divname == '2'; then styletwo"></div>
+                <div *ngIf="divname == '3'; then stylethree"></div>
+                <ng-template #styleone>
+                    <div class="sectionimages card-img-top" id="sectionimage1"></div>
+                    <h4 class="card-title m1 detailtitle">Software Developer Program</h4>
+                    <div class="container card-body">
+                        <h5 class="s2 card-text detail">
+                            Guide you to learn industry and commercial knowledge of being a software developer. 
+                            A team of experienced developers, career mentors and strategists will guide you 
+                            to find the perfect software developer job.
+                        </h5>
+                        <h5 class="s2 card-text detail">
+                            <ul>
+                                <li>Personalised learning of popular industry skills and techniques like C#, ASP.net, Angular, React</li>
+                                <li>Job application guidance, from CV advise to interview preparations.</li>
+                                <li>Experience and intern in a real work environment creating exciting new applications.</li>
+                                <li>Personalised roadmap of milestones and objectives.</li>
+                            </ul>
+                        </h5>
+                    </div>
+                </ng-template>
+                <ng-template #styletwo>
+                        <div class="sectionimages" id="sectionimage2"></div>
+                        <h4 class="card-title m1 detailtitle">Software Testing Program</h4>
+                        <div class="container card-body">
+                            <h5 class="s2 card-text detail">
+                                Guide you to learn industry and commercial knowledge of being a software tester. 
+                                A team of experienced testers, career mentors and strategists will guide you to find the perfect software testing job.
+                            </h5>
+                            <h5 class="s2 card-text detail">
+                                <ul>
+                                    <li>Personalised learning of popular industry skills and techniques like automation testing with Selenium, API testing with Postman.</li>
+                                    <li>Job application guidance, from CV advise to interview preparations.</li>
+                                    <li>Experience and intern in a real work environment being a software tester.</li>
+                                    <li>Personalised roadmap of milestones and objectives.</li>
+                                </ul>
+                            </h5>
+                        </div>
+                </ng-template>
+                <ng-template #stylethree>
+                        <div class="sectionimages" id="sectionimage3"></div>
+                        <h4 class="card-title m1 detailtitle">Business Intelligence & Data Analyst Program</h4>
+                        <div class="container card-body">
+                            <h5 class="s2 card-text detail">
+                                
+                            </h5>
+                        </div>
+                </ng-template>
+                </div>
+            </div>
+
+
+            <!-- right side -->
+            <div class="col-md-6 col-12">
+
+                <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
+                <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
+
+                <h4 class="l2">
+                    I'm interested in...</h4>
+                <h4 class="s1">
+                    What area are you interested in getting the most assistance with?
+                </h4>
+                <div class="row interest-section">
+                    <div class="col-6 col-sm-4" *ngFor="let interest of interests" (mouseenter)="mouseHoverEnter(interest.id)">
+                        <input class="interestinput" type='radio' name='interest' id='{{interest.input}}' />
+                        <label class="interestlabel" for='{{interest.input}}'>
+                            <img class="radiodiv" src="{{interest.backgroundimageurl}}">
+                            <h3 class="s2">{{interest.name}}</h3>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- the form -->
+                <h4 class="l2">
+                    My contact info is...
+                </h4>
+                <form [formGroup]="myForm" *ngIf="myForm">
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="firstname">First Name</label>
+                                <input class="form-control" id="firstname" formControlName="firstname" type="text" placeholder="First Name">
+                                <span class="invalid_feedback" *ngIf="myForm.controls.firstname.invalid && myForm.controls.firstname.touched">
+                                    <div *ngIf="myForm.controls.firstname.errors.required">First name is required</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.minlength">First name must be at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.firstname.errors.maxlength">First name must be at most 20 characters</div>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lastname">Last Name</label>
+                                <input class="form-control" id="lastname" formControlName="lastname" type="text" placeholder="Last Name">
+                                <span class="invalid_feedback" *ngIf="myForm.controls.lastname.invalid && myForm.controls.lastname.touched">
+                                    <div *ngIf="myForm.controls.lastname.errors.required">Last name is required</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.minlength">Last name must be at least 2 characters</div>
+                                    <div *ngIf="myForm.controls.lastname.errors.maxlength">Last name must be at most 30 characters</div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input class="form-control" id="email" formControlName="email" type="text" placeholder="example@example.com">
+                        <span class="invalid_feedback" *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">
+                            <div *ngIf="myForm.controls.email.errors.required">Email address is required</div>
+                            <div *ngIf="myForm.controls.email.errors.minlength">Email address must be at least 6 characters</div>
+                            <div *ngIf="myForm.controls.email.errors.email">Email address must be a valid email address</div>
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input class="form-control" id="phone" formControlName="phone" placeholder="Phone Number">
+                        <span class="invalid_feedback" *ngIf="myForm.controls.phone.invalid && myForm.controls.phone.touched">
+                            <div *ngIf="myForm.controls.phone.errors.required">Phone number is required</div>
+                            <div *ngIf="myForm.controls.phone.errors.minlength">Phone number must be at least 5 characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.maxlength">Phone number must be at most 20 characters</div>
+                            <div *ngIf="myForm.controls.phone.errors.pattern">Please enter a valid phone number</div>
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" formControlName="message" placeholder="Your Message" rows="4"></textarea>
+                        <span class="invalid_feedback" *ngIf="myForm.controls.message.invalid && myForm.controls.message.touched">
+                            <div>Message is required</div>
+                        </span>
+                    </div>
+
+                    <button [disabled]="myForm.invalid" type="button" class="btn btn-submit getstartbtn_blue_large" (click)="submit()">Send</button>
+                    <div class="feedback error-feedback" *ngIf="errorMessage && !successMessage"><b>{{errorMessage}}</b></div>
+                    <div class="feedback success-feedback" *ngIf="successMessage"><b>{{successMessage}}</b></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

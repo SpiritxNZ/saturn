@@ -1,0 +1,55 @@
+<div style="background-color:#212121; border-top-width: 0px;" class="modal-footer footer-div" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <h5 >Gradspace</h5>
+        <div *ngIf="isBrowser==true">
+          <p class="footer_list"><a [routerLink]="['/'+language+'/blog']" >{{'footeritem1' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/success-cases']"  >{{'footeritem2' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/faq']" >{{'footeritem3' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/about-us']" >{{'footeritem4' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/jobs']" >{{'footeritem9' | translate }}</a></p>
+          <!-- <p class="footer_list"><a routerLink="/contactus">Contact Us</a></p> -->
+        </div>
+        <div *ngIf="isBrowser==false">
+          <p class="footer_list"><a [href]="['http://gradspace.org/'+language+'/blogs-list']">{{'footeritem1' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://gradspace.org/'+language+'/success-cases']" >{{'footeritem2' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://gradspace.org/'+language+'/faq']">{{'footeritem3' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://gradspace.org/'+language+'/about-us']" >{{'footeritem4' | translate }}</a></p>
+          <p class="footer_list"><a [href]="['http://gradspace.org/'+language+'/jobs']" >{{'footeritem9' | translate }}</a></p>
+          <!-- <p class="footer_list"><a href="http://www.gradspace.org/contactus">Contact Us</a></p> -->
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <h5>Services</h5>
+        <div *ngIf="isBrowser==true">
+          <p class="footer_list"><a [routerLink]="['/'+language+'/program-tester']" >{{'footeritem5' | translate }}</a></p>
+          <p class="footer_list"><a [routerLink]="['/'+language+'/program-developer']" >{{'footeritem6' | translate }}</a></p>
+        </div>
+        <div *ngIf="isBrowser==false">
+            <p class="footer_list"><a [href]="['http://gradspace.org/'+language+'/program-tester']">{{'footeritem5' | translate }}</a></p>
+            <p class="footer_list"><a [href]="['http://gradspace.org/'+language+'/program-developer']" >{{'footeritem6' | translate }}</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <h5>Apply</h5>
+        <div *ngIf="isBrowser==true">
+          <p class="footer_list"><a [routerLink]="['/'+language+'/application']">{{'footeritem7' | translate }}</a></p>
+        </div>
+        <div *ngIf="isBrowser==false">
+          <p class="footer_list"><a [href]="['http://gradspace.org/'+language+'/application']">{{'footeritem7' | translate }}</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <h5>Social</h5>
+        <p><a href="https://www.facebook.com/LearnspaceNZ/"><i class="fa fa-facebook-f"></i> {{'footeritem8' | translate }}</a></p>
+        <p><small>Personalised IT career training in Auckland</small></p>
+        <p><small> &copy;	Gradspace 2018</small></p>
+        <small>Proprius Ltd, Auckland &copy;	 2018</small>
+      </div>
+    </div>
+  </div>
+</div>

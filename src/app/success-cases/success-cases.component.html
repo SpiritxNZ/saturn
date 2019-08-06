@@ -1,0 +1,47 @@
+<div class="background">
+  <section id="section1">
+    <div class="jumbotron-fluid">
+      <h1 class="j1" style="color:white; background-color: transparent">
+        {{'successcasestitle' | translate }}
+      </h1>
+    </div>
+  </section>
+  <div class="container">
+
+  <!-- Video person -->
+  <section id="section2">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch"
+          *ngFor="let videoPerson of videoPersons">
+          <div class="card video-card">
+            <div class="embed-responsive embed-responsive-16by9 video">
+              <iframe class="embed-responsive-item" [src]="videoPerson.video" allowfullscreen></iframe>
+            </div>
+            <h3 class="s1">{{videoPerson.name}} | {{videoPerson.uni}}</h3>
+            <h3 class="s2blue">Offer: {{videoPerson.jobLoc}}, {{videoPerson.job}}</h3>
+            <p class="s2 description">{{videoPerson.description}}</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Image person -->
+  <section id="section3">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch"
+          *ngFor="let imgperson of imgPersons">
+          <div style="margin-top:100px;" class="card video-card">
+            <div class="imgpadding imgpos">
+              <img class="embed-responsive-item imgcover imgcontain" [src]="imgperson.image" allowfullscreen>
+            </div>
+            <br>
+            <h4 class="s1">{{imgperson.name}} | {{imgperson.uni}}</h4>
+            <h4 class="s2blue">Offer: {{imgperson.jobLoc}}, {{imgperson.job}}</h4>
+            <p class="s2 description">{{imgperson.description}}</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+</div>
+</div>

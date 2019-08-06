@@ -1,0 +1,105 @@
+/*profile image of lecturer*/
+.portrait {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/*top part of the video card info*/
+.container.head {
+    margin-bottom: 20px;
+}
+
+/* main container */
+.container {
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+/*video and list cards*/
+.card {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.video {
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+
+/*lesson list*/
+.list-group-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+}
+.list-group-item:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.list-group-item.active {
+    background-color: rgb(205, 232, 255);
+    color: black;
+    border: none;
+}
+
+/*video info layout*/
+.head {
+    margin:0px
+}
+.card-title {
+    margin-top: 10px;
+}
+.card-small {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0;
+    width:100%;
+}
+.card-small .card-body {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.card-small h6, .card p {
+    margin-bottom:5px;
+}
+.card-body .col-lg-3 {
+    padding:5px;
+}
+.experience {
+    padding-left: 15px;
+}
+/* Page Header */
+header{
+    height:350px;
+    background-image: url("/assets/index-header-pic.jpg");
+    background-position: center;
+    border-radius:0px;
+    background-size: cover;
+    text-align:center;
+}
+header .jumbotron-fluid {
+    padding-top: 100px;
+}
+header h2 {
+    font-size: 26px;
+    color:white;
+}
+
+/* Small screen */
+@media(max-width:768px) {
+    .portrait {
+        height: 70px;
+        width: 70px;
+    }
+    .card-title {
+        font-size: 22px;
+        margin-top: 5px;
+    }
+    .card-subtitle {
+        font-size: 16px;
+    }
+}

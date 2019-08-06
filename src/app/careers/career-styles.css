@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  background: #EEF5F9;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1,
+.h1 {
+  font-size: 1.25rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.125rem;
+}
+
+h3,
+.h3 {
+  font-size: 1rem;
+}
+
+h4,
+.h4 {
+  font-size: 0.875rem;
+}
+
+h5,
+.h5 {
+  font-size: 0.75rem;
+}
+
+h6,
+.h6 {
+  font-size: 0.625rem;
+}
+
+.card {
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -1px 0 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -1px 0 2px rgba(0, 0, 0, 0.05);
+  border: 0 solid #eee;
+  border-radius: 0;
+}
+
+/***Font***/
+
+.font-12 {
+  font-size: 0.75rem;
+  line-height: 1.33333;
+  font-weight: 400;
+  color: rgba(0, 0, 0, .6);
+}
+
+.font-14 {
+  font-size: 0.875em;
+  line-height: 1;
+}

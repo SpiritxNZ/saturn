@@ -1,0 +1,115 @@
+.row
+{
+    padding-top: 20px;
+    margin: 0px;
+}
+.padding{
+    padding-bottom: 10px;
+}
+@media(max-width:576px) {
+    .row {
+       display: inline-block;
+    }
+}
+/* section1----------------------------------------------------------------------------------------- */
+#headerdiv{
+    padding-top: 200px;
+    }
+.mid1Content
+    {
+        color:white;
+    }
+header
+    {
+        height:620px;
+        background-image: url("../../../assets/header_images/serviceimage.jpg");
+        border-radius:0px;
+        background-size: cover;
+        text-align:center;
+    }
+/* section2----------------------------------------------------------------------------------------- */
+div.col-md-4.program:hover
+{
+    transform: translateY(-1.25rem);
+    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
+}
+div.col-md-4.program
+{
+    padding: 20px;
+    box-shadow: none;
+    transition: transform .3s ease;
+    cursor: pointer;
+    outline: 0;
+}
+.serviceimages
+{
+    width: 40px;
+    height: 40px;
+}
+/* section3----------------------------------------------------------------------------------------- */
+#section3
+{
+    text-align: center;
+    display: inline-block;
+}
+.custom-control.custom-checkbox
+{
+    background-color: rgba(182, 182, 182, 0.55);
+    border:2px solid rgba(109, 109, 109, 0.55);
+    height: 150px;
+    width: 240px;
+    padding-left: 32px;
+}
+.custom-control-label
+{
+    float: left;
+    cursor: pointer;
+}
+.custom-control.btn.btn-light:focus
+{
+    background-color: white;
+}
+.col-md-4
+{
+    border-radius: 8px;
+    text-align: center;
+}
+
+@media(max-width:576px) {
+    .custom-control.custom-checkbox
+    {
+        margin-bottom: 20px;
+        height: 150px;
+        width: 180px;
+        padding-left: 0px;
+    }
+    .custom-control-label
+    {
+        margin-left:40px;
+    }
+    .custom-control.btn.btn-light.custom-checkbox.col-xs-12.col-sm-6.col-md-4.offset-md-2
+    {
+        left: 0px !important;
+    }
+}
+/* section4----------------------------------------------------------------------------------------- */
+#servicesection4
+{
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
+#section4
+{
+    padding-bottom: 40px;
+}
+div.coursescontainer
+{
+    padding-bottom: 20px;
+}
+.spec{
+    width: 100%;
+    line-height: 34px;
+    font-size: 17px;
+    color: rgb(136, 136, 136);
+}

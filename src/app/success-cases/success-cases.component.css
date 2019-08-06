@@ -1,0 +1,136 @@
+.background {
+    background-color: #f4f4f4
+}
+#section1
+{
+    height: 40vh;
+    width: 100%;
+    background-image: url("../../assets/header_images/successcasesbg.jpg");
+    background-size: cover;
+    text-align:center;
+}
+#section1 .jumbotron-fluid {
+    padding-top: 15vh;
+}
+#section2 {
+    text-align: center;
+}
+.card-header
+{
+    background-color: white;
+}
+.successcasescontainer
+{
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    margin-top: 55px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background: #fff;
+    text-align: left;
+}
+.successcasesimage
+{
+    position: absolute; 
+    top: -50px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 100%;
+}
+.div1
+{
+    height: 150px; 
+    padding-top: 55px; 
+    text-align: center;
+}
+.div3
+{
+    height: 24px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+
+/* top container */ 
+#section3 .container {
+    padding: 20px;
+}
+#section3 .col-1 {
+    padding: 0;
+}
+
+/* cards holding the videos */
+.video {
+    border-radius: 2px;
+}
+#section2 h3.s1 {
+    margin-top: 20px;
+}
+.video-card {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px 0px;
+}
+#section3 .col-12 {
+    padding-top: 10px;
+}
+.description {
+    color: grey;
+    text-align: justify;
+}
+
+/* Carousel styling */
+.carousel-control-prev, .carousel-control-next {
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: white;
+    box-shadow: 0 2px 12px 3px hsla(0,0%,89%,.55);
+    border-radius: 5px;
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%353535' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%353535' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+/* @media (max-width: 992px) {
+    .video {
+        height: 50vh;
+    }
+}
+@media (max-width: 768px) {
+    .video {
+        height: 40vh;
+    }
+} */
+
+#section3 h4 {
+    text-align: center;
+}
+.imgcover{
+    text-align: center;
+    /* object-fit: cover; */
+    border-radius: 50%;
+    width:40%;
+    height:40%;     
+}
+.imgpos{
+    text-align: center;
+    
+}
+.imgpadding{
+    margin-top:-100px;
+}
+.imgcontain{
+    width:140px;
+    height:140px;
+}

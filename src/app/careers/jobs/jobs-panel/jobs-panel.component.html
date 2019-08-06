@@ -1,0 +1,20 @@
+<!-- The inital navbar needs to be fixed & further considered here, -->
+<!-- We use <br>s to resolve this now -->
+<br><br>
+
+<div [ngStyle]="{'height.px': bodyHeight}">
+  <!-- <app-navbar></app-navbar> -->
+  <section class="main-content container">
+    <div class="filter-holder">
+      <app-jobs-searchbar></app-jobs-searchbar>
+    </div>
+    <div class="row" style="margin-top: 1rem;">
+      <div id="job-list-left" class="col-6">
+        <app-jobs-listing></app-jobs-listing>
+      </div>
+      <div id="job-list-right" class="col-6">
+        <app-job></app-job>
+      </div>
+    </div>
+  </section>
+</div>
