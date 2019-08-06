@@ -1,7 +1,7 @@
 import { Component, OnInit, Directive } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { JobsDetailComponent } from '../jobs-detail/jobs-detail.component';
+// import { JobsDetailComponent } from '../jobs-detail/jobs-detail.component';
 import { CareerApiServiceService } from '../../../services/career-api-service.service'
 import { RepositoryService } from '../../../services/repository.service';
 import { identifierModuleUrl } from '@angular/compiler';
