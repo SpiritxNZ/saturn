@@ -87,12 +87,12 @@ export class JobsListingComponent implements OnInit {
         if (res.itemId) {
           this.itemId = res.itemId;
         }
-        if(res.order_by){
+        if (res.order_by) {
           this.sortBy = res.order_by;
         } else if (res.order_by == undefined) {
           this.sortBy = "";
         }
-        this.titleService.setTitle('Gradspace '+this.keyword+' Jobs');
+        this.titleService.setTitle('Gradspace ' + this.keyword + ' Jobs');
         this.getListData(this.keyword, this.industry, this.location, this.type, this.currentPage, this.sortBy);
       }
     )
@@ -101,6 +101,7 @@ export class JobsListingComponent implements OnInit {
   getListData(keyword, industry, location, type, page, orderby) {
     this.contentservice.searchKeyWord(keyword, industry, location, type, page, orderby).subscribe(
       (res) => {
+        // console.log(res.error.text)
         this.jobLists = res.data;
         this.lengthTotal = res.total;
         this.currentPage = res.current_page;
@@ -139,8 +140,8 @@ export class JobsListingComponent implements OnInit {
   }
 
   //the function of the middle click
-  onMiddleClick(event, id){
-    if(event.button == 1) {
+  onMiddleClick(event, id) {
+    if (event.button == 1) {
       window.open('en/jobdetail?itemId=' + id, '_blank');
     }
   }
@@ -148,14 +149,10 @@ export class JobsListingComponent implements OnInit {
   backendErrorHandler(err) {
     console.warn(err)
     if (err.error.message != null) {
-      if(err.status != 500) {
-      this.errorMessage = err.error.message;
-      } else {
-        this.errorMessage = "Sorry, there are no data !"
-      }
+      this.errorMessage = "Sorry, there are no data !"
     }
     else {
-      this.errorMessage = "Server connection failed !"
+      this.errorMessage = err.error.text;
     }
   }
 }
