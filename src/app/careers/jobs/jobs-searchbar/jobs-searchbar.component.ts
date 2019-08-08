@@ -18,12 +18,14 @@ export class JobsSearchbarComponent implements OnInit {
   public typeId = "";
   public sortId = "";
   public errorMessage: any;
+  isBrowser=false;
 
   constructor(
     private contentService: CareerApiServiceService,
     private storeValueService: RepositoryService,
     private activatedRoute: ActivatedRoute,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.getDropDown();

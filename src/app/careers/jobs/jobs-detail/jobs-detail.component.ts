@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CareerApiServiceService } from '../../../services/career-api-service.service';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-jobs-detail',
@@ -16,8 +17,10 @@ export class JobsDetailComponent implements OnInit {
   public listingHeight: any;
   public jobDetails: any;
   public errorMessage: string;
+  isBrowser=false;
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId,
     private meta: Meta,
     private titleService: Title,
     private translate: TranslateService,
@@ -25,9 +28,15 @@ export class JobsDetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) {
     translate.setDefaultLang('blog-gradspace-intro-' + this.activatedRoute.snapshot.paramMap.get('lang'));
+    if (isPlatformBrowser(this.platformId)) {
+      this.isBrowser = true
+    }
   }
 
   ngOnInit() {
+    if(!this.isBrowser){
+      return
+    }
     this.compoHeight();
     this.getJobItem();
   }

@@ -1,9 +1,10 @@
-import { Component, OnInit, Directive } from '@angular/core';
+import { Component, OnInit, Directive, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CareerApiServiceService } from '../../../services/career-api-service.service'
 import { RepositoryService } from '../../../services/repository.service';
 import { Meta, Title } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-jobs-list',
@@ -25,15 +26,21 @@ export class JobsListComponent implements OnInit {
   public listingHeight: any
   public itemData: any;
   public pagesIndex: any;
+  isBrowser=false;
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId,
     private contentservice: CareerApiServiceService,
     private storeValueService: RepositoryService,
     private activatedRoute: ActivatedRoute,
     private meta: Meta,
     private titleService: Title,
 
-  ) { }
+  ) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isBrowser = true
+    }
+  }
 
   ngOnInit() {
     this.getAddressValue();
