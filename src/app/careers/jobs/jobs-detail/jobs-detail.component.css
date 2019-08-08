@@ -1,38 +1,37 @@
 .content {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-  .card-content{
-    border-top: 1px solid #DBDBDB;
-  }
-  
-  
-  .job-apply .job-apply-button {
-    margin: 0;
-    white-space: nowrap;
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-    transition-duration: 167ms;
-    align-items: center;
-    border: none;
-    border-radius: 2px;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 600;
-    display: inline-flex;
-    justify-content: center;
-    max-width: 480px;
-    overflow: hidden;
-    outline-width: 2px;
-    transition-property: background-color, box-shadow, color;
-    vertical-align: middle;
-    font-size: 1rem;
-    min-height: 40px;
-    line-height: 20px;
-    padding: 10px 16px;
-    background-color: #0073b1;
-    color: #fff;
-    text-align: center;
-  }
-  
-  
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card-content {
+  border-top: 1px solid #DBDBDB;
+}
+
+
+.job-apply .job-apply-button {
+  margin: 0;
+  white-space: nowrap;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: 167ms;
+  align-items: center;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  max-width: 480px;
+  overflow: hidden;
+  outline-width: 2px;
+  transition-property: background-color, box-shadow, color;
+  vertical-align: middle;
+  font-size: 1rem;
+  min-height: 40px;
+  line-height: 20px;
+  padding: 10px 16px;
+  background-color: #0073b1;
+  color: #fff;
+  text-align: center;
+}

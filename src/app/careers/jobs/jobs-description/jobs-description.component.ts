@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { RepositoryService } from '../../../services/repository.service';
 
 @Component({
-  selector: 'app-job',
-  templateUrl: './job.component.html',
-  styleUrls: ['./job.component.css', '../../career-styles.css']
+  selector: 'app-jobs-description',
+  templateUrl: './jobs-description.component.html',
+  styleUrls: ['./jobs-description.component.css', '../../career-styles.css']
 })
-export class JobComponent implements OnInit {
+export class JobsDescriptionComponent implements OnInit {
   public action: any;
   public innerHeight: any;
   public listingHeight: any;
-  errorMessage:string;
+  errorMessage: string;
 
   constructor(
     private storeValueService: RepositoryService
@@ -23,9 +23,9 @@ export class JobComponent implements OnInit {
 
   compoHeight() {
     this.innerHeight = window.innerHeight;
-    this.listingHeight = this.innerHeight - 130
+    this.listingHeight = this.innerHeight - 120
   }
-  
+
   // get a item from jobs-list.component clicking
   getJobItem() {
     this.storeValueService.getItemsList.subscribe(

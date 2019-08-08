@@ -1,23 +1,16 @@
 import { Component, OnInit, Directive } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-// import { JobsDetailComponent } from '../jobs-detail/jobs-detail.component';
 import { CareerApiServiceService } from '../../../services/career-api-service.service'
 import { RepositoryService } from '../../../services/repository.service';
-import { identifierModuleUrl } from '@angular/compiler';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-jobs-listing',
-  templateUrl: './jobs-listing.component.html',
-  styleUrls: ['./jobs-listing.component.css', '../../career-styles.css']
+  selector: 'app-jobs-list',
+  templateUrl: './jobs-list.component.html',
+  styleUrls: ['./jobs-list.component.css', '../../career-styles.css']
 })
-
-@Directive({
-  selector: '[onScroll]',
-})
-
-export class JobsListingComponent implements OnInit {
+export class JobsListComponent implements OnInit {
   public jobLists: any;
   public lengthTotal: any;
   public keyword = '';

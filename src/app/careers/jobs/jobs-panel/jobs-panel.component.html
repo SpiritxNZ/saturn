@@ -3,17 +3,16 @@
 <br><br>
 
 <div [ngStyle]="{'height.px': bodyHeight}">
-  <!-- <app-navbar></app-navbar> -->
   <section class="main-content container">
     <div class="filter-holder">
       <app-jobs-searchbar></app-jobs-searchbar>
     </div>
     <div class="row" style="margin-top: 1rem;">
       <div id="job-list-left" class="col-6">
-        <app-jobs-listing></app-jobs-listing>
+        <app-jobs-list></app-jobs-list>
       </div>
       <div id="job-list-right" class="col-6">
-        <app-job></app-job>
+        <app-jobs-description></app-jobs-description>
       </div>
     </div>
   </section>

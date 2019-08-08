@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CareerApiServiceService } from '../../../services/career-api-service.service'
-import { RepositoryService } from '../../../services/repository.service';
+import { CareerApiServiceService } from '../../../services/career-api-service.service';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Meta, Title } from '@angular/platform-browser';
@@ -16,7 +15,7 @@ export class JobsDetailComponent implements OnInit {
   public innerHeight: any;
   public listingHeight: any;
   public jobDetails: any;
-  public errorMessage:string;
+  public errorMessage: string;
 
   constructor(
     private meta: Meta,
@@ -25,7 +24,7 @@ export class JobsDetailComponent implements OnInit {
     private contentservice: CareerApiServiceService,
     private activatedRoute: ActivatedRoute
   ) {
-    translate.setDefaultLang('blog-gradspace-intro-'+this.activatedRoute.snapshot.paramMap.get('lang'));
+    translate.setDefaultLang('blog-gradspace-intro-' + this.activatedRoute.snapshot.paramMap.get('lang'));
   }
 
   ngOnInit() {
@@ -35,7 +34,7 @@ export class JobsDetailComponent implements OnInit {
 
   compoHeight() {
     this.innerHeight = window.innerHeight;
-    this.listingHeight = this.innerHeight - 130
+    this.listingHeight = this.innerHeight - 120
   }
 
   // get a item from jobs-list.component clicking
@@ -48,18 +47,18 @@ export class JobsDetailComponent implements OnInit {
       }
     )
   }
-  
+
   // get the detail of a item by id
   getJobDescri(data, id) {
     this.contentservice.jobdescri(id).subscribe(
       (act) => {
         data.description = act.job_description[0].description;
         this.jobDetails = data;
-        this.titleService.setTitle('Gradspace | '+this.jobDetails.title+' Jobs');
+        this.titleService.setTitle('Gradspace | ' + this.jobDetails.title + ' Jobs');
       },
-      (err)=>{
+      (err) => {
         console.warn(err),
-        this.errorMessage = "Sorry, something went wrong."
+          this.errorMessage = "Sorry, something went wrong."
       }
     )
   }

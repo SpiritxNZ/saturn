@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from "@angular/router";
 import { Meta, Title } from '@angular/platform-browser';
-import { JobsListingComponent } from '../jobs-listing/jobs-listing.component';
 
 @Component({
   selector: 'app-jobs-panel',

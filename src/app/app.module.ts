@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -36,12 +36,11 @@ import { BlogComponent } from './blog/blog/blog.component';
 import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { BlogArticleComponent } from './blog/blog-article/blog-article.component';
 import { ProgramDataanalystComponent } from './programs/program-dataanalyst/program-dataanalyst.component';
-import { JobComponent } from './careers/jobs/job/job.component';
-import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.component';
 import { JobsPanelComponent } from './careers/jobs/jobs-panel/jobs-panel.component';
 import { JobsSearchbarComponent } from './careers/jobs/jobs-searchbar/jobs-searchbar.component';
-import { JobsListingComponent } from './careers/jobs/jobs-listing/jobs-listing.component';
-
+import { JobsListComponent } from './careers/jobs/jobs-list/jobs-list.component';
+import { JobsDescriptionComponent } from './careers/jobs/jobs-description/jobs-description.component';
+import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.component';
 
 @NgModule({
   declarations: [
@@ -66,11 +65,11 @@ import { JobsListingComponent } from './careers/jobs/jobs-listing/jobs-listing.c
     PageNotFoundComponent,
     BlogArticleComponent,
     ProgramDataanalystComponent,
-    JobComponent,
-    JobsDetailComponent,
     JobsPanelComponent,
     JobsSearchbarComponent,
-    JobsListingComponent
+    JobsListComponent,
+    JobsDescriptionComponent,
+    JobsDetailComponent,
   ],
 
 
@@ -91,7 +90,6 @@ import { JobsListingComponent } from './careers/jobs/jobs-listing/jobs-listing.c
       }
     }),
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })

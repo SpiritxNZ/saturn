@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { CareerApiServiceService } from '../../../services/career-api-service.service'
 import { RepositoryService } from '../../../services/repository.service';
 import { ActivatedRoute } from '@angular/router';
