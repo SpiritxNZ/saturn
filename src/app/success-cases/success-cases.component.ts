@@ -16,7 +16,7 @@ export class SuccesscasesComponent implements OnInit {
 cnoren:string;
 videoPersons: any[] = [
   {
-    video: 'https://www.youtube.com/embed/Nbpl_8ijhUo',
+    video: 'https://www.youtube.com/embed/nA8XRmy5CpY',
     name: 'Neo',
     uni: '',
     job: 'Junior Developer',
@@ -28,7 +28,7 @@ videoPersons: any[] = [
     Laravel framework (PHP) as a RESTful API.`
   },
   {
-    video: 'https://www.youtube.com/embed/qw2b4HEgoeA',
+    video: 'https://www.youtube.com/embed/XQo2aOsN3LU',
     name: 'Bill',
     uni: '| AUT',
     job: 'Junior Developer',
@@ -39,7 +39,7 @@ videoPersons: any[] = [
     of graduates to complete a major commercial project.`
   },
   {
-    video: 'https://www.youtube.com/embed/EYd_USvuDdI',
+    video: 'https://www.youtube.com/embed/U6M0BbeTyks',
     name: 'Pirlo',
     uni: '| AUT',
     job: 'Intermediate Developer',
