@@ -56,15 +56,15 @@
     padding-bottom: 0.5rem;
   }
   
-  h3 {
+  h4 {
     cursor: pointer;
   }
   
-  h3:hover {
+  h4:hover {
     color: blueviolet !important;
   }
   
-  h3:active {
+  h4:active {
     color: green !important;
   }
   

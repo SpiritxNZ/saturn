@@ -23,10 +23,10 @@
             <div class="company-content">
               <div class="company-content-brief">
                 <div class="clicktittle" (mouseup)="onMiddleClick($event,i.id)">
-                  <h3 style="color: blue"><b>{{i.title}}</b></h3>
+                  <h4 style="color: blue"><b>{{i.title}}</b></h4>
                 </div>
-                <h4 *ngIf="i.principal != ''"><b>{{i.principal}}</b></h4>
-                <h5>{{i.location_name}}, NZ</h5>
+                <h5 *ngIf="i.principal != ''"><b>{{i.principal}}</b></h5>
+                <h6>{{i.location_name}}, NZ</h6>
               </div>
             </div>
           </div>

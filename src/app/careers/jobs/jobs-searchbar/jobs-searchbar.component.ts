@@ -18,7 +18,7 @@ export class JobsSearchbarComponent implements OnInit {
   public typeId = "";
   public sortId = "";
   public errorMessage: any;
-  isBrowser=false;
+  isBrowser = false;
 
   constructor(
     private contentService: CareerApiServiceService,
@@ -33,6 +33,7 @@ export class JobsSearchbarComponent implements OnInit {
   }
 
   getDropDown() {
+    // console.log(this.selectItem.focus());
     this.contentService.dropDownItems().subscribe(
       (res) => {
         if (res.dataCon) {
@@ -76,7 +77,7 @@ export class JobsSearchbarComponent implements OnInit {
         if (res.typeNum) {
           this.typeId = res.typeNum;
         }
-        if(res.order_by) {
+        if (res.order_by) {
           this.sortId = res.order_by
         }
       }
