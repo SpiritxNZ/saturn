@@ -10,6 +10,7 @@
 
 .job-apply .job-apply-button {
   margin: 0;
+  float: right;
   white-space: nowrap;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   transition-duration: 167ms;

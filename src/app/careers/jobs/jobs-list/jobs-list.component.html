@@ -17,7 +17,7 @@
       <h1>{{errorMessage}}</h1>
     </div>
     <div *ngIf="!errorMessage">
-      <ul *ngIf="jobLists">
+      <ul *ngIf="jobLists" style="padding-left:0;">
         <li *ngFor="let i of jobLists" (click)="showData(i)">
           <div class="job-item">
             <div class="company-content">
