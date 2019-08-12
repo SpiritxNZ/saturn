@@ -23,11 +23,11 @@
         <div style="float: left;">
           <span *ngIf="jobDetails && jobDetails.timeType_name != ''">{{jobDetails.timeType_name}}</span><br>
           <span *ngIf="jobDetails && jobDetails.principal != ''">{{jobDetails.principal}}</span>
-        </div>
+        </div><br><br>
         <div class="job-apply" *ngIf="jobDetails">
           <a href="{{jobDetails.link}}" style="text-decoration:none" target="_blank">
             <button class="job-apply-button">
-              <span>Go to the Source</span>
+              <span>Apply at Source</span>
             </button>
           </a>
         </div>

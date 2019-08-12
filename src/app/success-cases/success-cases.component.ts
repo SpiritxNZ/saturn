@@ -97,7 +97,7 @@ imgPersons: any[]=[
     name:'Sarah',
     uni:'Unitec Institute of Technology',
     job:'Software Developer',
-    jobLoc:'Gentrack',
+    jobLoc:'Jade Software',
     description:"I started at Gradspace when I was just finishing studying Graduate Diploma in Computing at Unitec. I was a junior product manager in China for 1 year, and dosn't have programming experience. Gradspace was able to provide me with much needed experience, I built my project portfolio up from nothing to 3 projects in 4 months, which really helped me to find a job. In addition, Mike will personally help you prepare every interview, which was really helpful. Definitely recommended to anyone like me seeking a IT job.",
   }
 ]
