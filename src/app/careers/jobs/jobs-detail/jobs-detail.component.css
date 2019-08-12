@@ -1,5 +1,9 @@
+.mat-card-header {
+  padding: 0 3rem;
+}
+
 .content {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
 }
 
@@ -7,10 +11,14 @@
   border-top: 1px solid #DBDBDB;
 }
 
+.job-apply {
+  position: relative;
+  left: 34.2rem;
+  top: 2rem;
+}
 
 .job-apply .job-apply-button {
   margin: 0;
-  float: right;
   white-space: nowrap;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   transition-duration: 167ms;
