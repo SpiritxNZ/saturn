@@ -12,9 +12,8 @@
 }
 
 .job-apply {
-  position: relative;
-  left: 34.2rem;
-  top: 2rem;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
 }
 
 .job-apply .job-apply-button {

@@ -15,7 +15,7 @@
             <span *ngIf="jobDetails.rate_low">{{jobDetails.rate_low | currency:'CAD':'symbol-narrow':'0.0'}}</span>
             <span *ngIf="jobDetails.rate_low && jobDetails.rate_high"> - </span>
             <span *ngIf="jobDetails.rate_high">{{jobDetails.rate_high | currency:'CAD':'symbol-narrow':'0.0'}}</span>
-          </h3>
+          </h3>&nbsp;&nbsp;&nbsp;
           <span *ngIf="jobDetails" style="float:right;">{{jobDetails.location_name}}, NZ</span>
         </div>
         <div>
@@ -24,15 +24,14 @@
           <span *ngIf="jobDetails && jobDetails.principal != ''" style="float:right;">{{jobDetails.principal}}</span>
         </div>
       </mat-card-subtitle>
-      <div mat-card-div class="job-apply" *ngIf="jobDetails">
-          <a href="{{jobDetails.link}}" style="text-decoration:none" target="_blank">
-            <button class="job-apply-button" style="background-color: #0099FF;">
-              <span>Apply at Source</span>
-            </button>
-          </a>
-        </div>
     </mat-card-header>
-    
+    <div class="job-apply" *ngIf="jobDetails">
+      <a href="{{jobDetails.link}}" style="text-decoration:none" target="_blank">
+        <button class="job-apply-button" style="background-color: #0099FF;">
+          <span>Apply at Source</span>
+        </button>
+      </a>
+    </div>
     <mat-card-content class="card-content">
       <article>
         <div [innerHTML]="jobDetails.description | safeHtml" *ngIf="jobDetails" style="padding:3rem;"></div>
