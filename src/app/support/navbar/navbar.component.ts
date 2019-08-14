@@ -38,7 +38,7 @@ export class NavbarComponent implements OnInit {
     this.router.events
       .subscribe((event) => {
         if (event instanceof NavigationStart) {
-          if (event.url !== '/en/jobs') {
+          if (event.url.indexOf('/en/jobs')) {
             document.getElementById("imnavbar").className = 'fixed-top';
           } else {
             document.getElementById("imnavbar").classList.remove("fixed-top");
