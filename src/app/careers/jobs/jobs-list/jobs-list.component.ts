@@ -26,7 +26,8 @@ export class JobsListComponent implements OnInit {
   public listingHeight: any
   public itemData: any;
   public pagesIndex: any;
-  isBrowser=false;
+  public titleHref = "";
+  isBrowser = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId,
@@ -50,6 +51,22 @@ export class JobsListComponent implements OnInit {
   compoHeight() {
     this.innerHeight = window.innerHeight;
     this.listingHeight = this.innerHeight - 185
+  }
+
+  //the function of the middle click
+  onMiddleClick(event, act) {
+    if (event.button == 0) {
+      if (this.titleHref == "" || this.titleHref.indexOf('itemId=') != -1) {
+        this.titleHref = "javascript:void(0)";
+      }
+      this.showData(act)
+    }
+    if (event.button == 1) {
+      window.open('en/jobdetail?itemId=' + act.id, '_blank');
+    }
+    if (event.button == 2) {
+      this.titleHref = '/en/jobdetail?itemId=' + act.id;
+    }
   }
 
   // sent itemid and page number to Url
@@ -137,13 +154,6 @@ export class JobsListComponent implements OnInit {
         this.backendErrorHandler(err);
       }
     );
-  }
-
-  //the function of the middle click
-  onMiddleClick(event, id) {
-    if (event.button == 1) {
-      window.open('en/jobdetail?itemId=' + id, '_blank');
-    }
   }
 
   backendErrorHandler(err) {

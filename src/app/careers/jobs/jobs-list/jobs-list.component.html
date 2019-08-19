@@ -18,12 +18,16 @@
     </div>
     <div *ngIf="!errorMessage">
       <ul *ngIf="jobLists" style="padding-left:0;">
-        <li *ngFor="let i of jobLists" (click)="showData(i)">
+        <li *ngFor="let i of jobLists" (mouseup)="onMiddleClick($event,i)">
           <div class="job-item">
             <div class="company-content">
               <div class="company-content-brief">
-                <div class="clicktittle" (mouseup)="onMiddleClick($event,i.id)">
-                  <h4 style="color: blue"><b>{{i.title}}</b></h4>
+                <div>
+                  <h4 style="color: blue">
+                    <b>
+                      <a [href]="titleHref">{{i.title}}</a>
+                    </b>
+                  </h4>
                 </div>
                 <h5 *ngIf="i.principal != ''"><b>{{i.principal}}</b></h5>
                 <h6>{{i.location_name}}, NZ</h6>
