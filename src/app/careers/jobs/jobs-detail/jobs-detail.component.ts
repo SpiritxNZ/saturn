@@ -63,6 +63,7 @@ export class JobsDetailComponent implements OnInit {
       (act) => {
         data.description = act.job_description[0].description;
         this.jobDetails = data;
+        console.log(this.jobDetails)
         this.titleService.setTitle('Gradspace | ' + this.jobDetails.title + ' Jobs');
       },
       (err) => {

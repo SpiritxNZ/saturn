@@ -1,36 +1,41 @@
 <div class="container">
   <mat-card class="content crad" [ngStyle]="{'height.px': listingHeight}" style="overflow-y: auto">
-    <mat-card-header>
-      <mat-card-title>
-        <div style="color:red; font-size: 20px;" *ngIf="errorMessage">
-          {{errorMessage}}
-        </div>
-        <div *ngIf="jobDetails">
-          <h2>{{jobDetails.title}}</h2>
-        </div>
-      </mat-card-title>
-      <mat-card-subtitle>
-        <div style="padding:1rem 0;">
-          <h3 *ngIf="jobDetails" style="display:inline">
-            <span *ngIf="jobDetails.rate_low">{{jobDetails.rate_low | currency:'CAD':'symbol-narrow':'0.0'}}</span>
-            <span *ngIf="jobDetails.rate_low && jobDetails.rate_high"> - </span>
-            <span *ngIf="jobDetails.rate_high">{{jobDetails.rate_high | currency:'CAD':'symbol-narrow':'0.0'}}</span>
-          </h3>&nbsp;&nbsp;&nbsp;
-          <span *ngIf="jobDetails" style="float:right;">{{jobDetails.location_name}}, NZ</span>
-        </div>
-        <div>
-          <h3 *ngIf="jobDetails && jobDetails.timeType_name != ''" style="display:inline">{{jobDetails.timeType_name}}
-          </h3>
-          <span *ngIf="jobDetails && jobDetails.principal != ''" style="float:right;">{{jobDetails.principal}}</span>
-        </div>
-      </mat-card-subtitle>
-    </mat-card-header>
-    <div class="job-apply" *ngIf="jobDetails">
-      <a href="{{jobDetails.link}}" style="text-decoration:none" target="_blank">
-        <button class="job-apply-button" style="background-color: #0099FF;">
-          <span>Apply at Source</span>
-        </button>
-      </a>
+    <div>
+      <mat-card-header id="cardheader">
+        <mat-card-title>
+          <div style="color:red; font-size: 20px;" *ngIf="errorMessage">
+            {{errorMessage}}
+          </div>
+          <div *ngIf="jobDetails">
+            <h2>{{jobDetails.title}}</h2>
+          </div>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <div style="padding:1rem 0;">
+            <h3 *ngIf="jobDetails" style="display:inline">
+              <span *ngIf="jobDetails.rate_low">{{jobDetails.rate_low | currency:'CAD':'symbol-narrow':'0.0'}}</span>
+              <span *ngIf="jobDetails.rate_low && jobDetails.rate_high"> - </span>
+              <span *ngIf="jobDetails.rate_high">{{jobDetails.rate_high | currency:'CAD':'symbol-narrow':'0.0'}}</span>
+            </h3>&nbsp;&nbsp;&nbsp;
+            <span *ngIf="jobDetails" style="float:right;">{{jobDetails.location_name}}, NZ</span>
+          </div>
+          <div>
+            <h3 *ngIf="jobDetails && jobDetails.timeType_name != ''" style="display:inline">{{jobDetails.timeType_name}}
+            </h3>
+            <span *ngIf="jobDetails && jobDetails.principal != ''" style="float:right;">{{jobDetails.principal}}</span>
+          </div>
+          <div class="job-apply" *ngIf="jobDetails">
+              <span>
+                <a href="{{jobDetails.link}}" style="text-decoration:none" target="_blank">
+                  <button class="job-apply-button" style="background-color: #0099FF;">
+                    <span>Apply at Source</span>
+                  </button>
+                </a>
+              </span>
+              <span *ngIf="jobDetails" style="float:right;">Post Day: Jul 1, 2019</span>
+            </div>
+        </mat-card-subtitle>
+      </mat-card-header>
     </div>
     <mat-card-content class="card-content">
       <article>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CareerApiServiceService } from '../../../services/career-api-service.service'
 import { RepositoryService } from '../../../services/repository.service';
 import { ActivatedRoute } from '@angular/router';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-jobs-searchbar',
@@ -13,27 +14,26 @@ export class JobsSearchbarComponent implements OnInit {
   public jobLoc: any;
   public jobType: any;
   public keyword = "";
-  public industryId = "";
-  public locationId = "";
-  public typeId = "";
+  public industryId = [];
+  public locationId = [];
+  public typeId = [];
   public sortId = "";
   public errorMessage: any;
   isBrowser = false;
+
+  public toppings = new FormControl;
 
   constructor(
     private contentService: CareerApiServiceService,
     private storeValueService: RepositoryService,
     private activatedRoute: ActivatedRoute,
-  ) {
-  }
+  ) { }
 
   ngOnInit() {
     this.getDropDown();
-    this.refreshPageControl();
   }
 
   getDropDown() {
-    // console.log(this.selectItem.focus());
     this.contentService.dropDownItems().subscribe(
       (res) => {
         if (res.dataCon) {
@@ -41,6 +41,7 @@ export class JobsSearchbarComponent implements OnInit {
           this.jobLoc = res.dataCon.job_location;
           this.jobType = res.dataCon.job_type;
           delete this.errorMessage;
+          this.refreshPageControl();
         } else {
           this.errorMessage = "Error! Can't catch Data."
         }
@@ -68,16 +69,28 @@ export class JobsSearchbarComponent implements OnInit {
         if (res.searchString) {
           this.keyword = res.searchString;
         }
-        if (res.disciplineNum) {
-          this.industryId = res.disciplineNum;
+        if (res.disciplineNum !== '') {
+          if (typeof (res.disciplineNum) == 'string') {
+            this.industryId[0] = res.disciplineNum;
+          } else {
+            this.industryId = res.disciplineNum;
+          }
         }
-        if (res.locationNum) {
-          this.locationId = res.locationNum;
+        if (res.locationNum !== '') {
+          if (typeof (res.locationNum) == 'string') {
+            this.locationId[0] = res.locationNum;
+          } else {
+            this.locationId = res.locationNum;
+          }
         }
-        if (res.typeNum) {
-          this.typeId = res.typeNum;
+        if (res.typeNum !== '') {
+          if (typeof (res.typeNum) == 'string') {
+            this.typeId[0] = res.typeNum;
+          } else {
+            this.typeId = res.typeNum;
+          }
         }
-        if (res.order_by) {
+        if (res.order_by && res.order_by != '') {
           this.sortId = res.order_by
         }
       }

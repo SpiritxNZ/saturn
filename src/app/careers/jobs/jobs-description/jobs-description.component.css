@@ -156,6 +156,17 @@ span {
   margin-right: 8px !important;
 }
 
+.post-day{
+  float: right;
+}
+
+.postfont {
+  font-size: 1.12rem;
+  position: relative;
+  bottom: -0.5rem;
+  /* z-index: 99; */
+}
+
 .job-apply .job-apply-button {
   margin: 0;
   white-space: nowrap;

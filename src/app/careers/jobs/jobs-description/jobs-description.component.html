@@ -28,6 +28,9 @@
                       </button>
                     </a>
                   </div>
+                  <div class="post-day">
+                    <div class="postfont" *ngIf="action">{{action.crawled_at | date:'mediumDate'}}</div>
+                  </div>
                 </div>
               </div>
             </div>

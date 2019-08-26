@@ -1,12 +1,14 @@
 <div class="card">
   <div class="job-list-header">
     <div class="header-first">
-      <div *ngIf="!keyword">
-        All Jobs in New Zealand
-      </div>
-      <div *ngIf="keyword">
-        {{keyword}} in New Zealand
-      </div>
+      <span *ngIf="!keyword">
+        All selected Jobs in 
+      </span>
+      <span *ngIf="keyword">
+        {{keyword}} in 
+      </span>
+      <span *ngIf="location" title="{{locationName}}"><b>Locations</b> of </span>
+      New Zealand
       <div class="font-mini" *ngIf="lengthTotal">
         {{lengthTotal}} results
       </div>
@@ -31,6 +33,12 @@
                 </div>
                 <h5 *ngIf="i.principal != ''"><b>{{i.principal}}</b></h5>
                 <h6>{{i.location_name}}, NZ</h6>
+              </div>
+              <div class="company-content-postday">
+                <div class="post-day-postion">
+                  <div class="post-day-font"><b>Post Day:</b></div>
+                  <div class="post-day-font">{{i.crawled_at | date:'shortDate'}}</div>
+                </div>
               </div>
             </div>
           </div>

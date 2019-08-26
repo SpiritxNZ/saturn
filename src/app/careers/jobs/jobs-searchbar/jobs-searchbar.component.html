@@ -1,39 +1,56 @@
 <div class="card">
-    <div class="page-content align-items-stretch row">
-      <mat-form-field class="col-3 search-bar">
-        <input matInput placeholder="Search by keywords" [(ngModel)]="keyword">
-      </mat-form-field>
-      <mat-form-field class="col-2">
-        <mat-label>Any Classification</mat-label>
-        <mat-select [(ngModel)]="industryId" multiple>
-          <mat-option *ngFor="let i of jobDis" value="{{i.discipline_num}}">{{i.discipline_name}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field class="col-2">
-        <mat-label>Location</mat-label>
-        <mat-select [(ngModel)]="locationId" multiple>
-          <mat-option *ngFor="let i of jobLoc" value="{{i.location_num}}">{{i.location_name}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field class="col-2">
-        <mat-label>All Work Types</mat-label>
-        <mat-select [(ngModel)]="typeId" multiple>
-          <mat-option *ngFor="let i of jobType" value="{{i.type_num}}">{{i.type_name}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field class="col-2">
-          <mat-label>Sort by</mat-label>
-          <mat-select [(ngModel)]="sortId">
-            <mat-option value="">Relevance</mat-option>
-            <mat-option value="crawled_at">Post date</mat-option>
-          </mat-select>
-        </mat-form-field>
-      <div class="col-1 btn-css" style="padding-left:0;">
-        <button mat-raised-button style="background-color: #0099FF; color: #fff" (click)="onSearch()">Search</button>
-      </div>
+  <div class="page-content align-items-stretch row">
+    <mat-form-field class="col-3 search-bar">
+      <input matInput placeholder="Search by keywords" [(ngModel)]="keyword">
+    </mat-form-field>
+    <mat-form-field class="col-2">
+      <mat-label>Any Classification</mat-label>
+      <mat-select [(ngModel)]="industryId" multiple>
+        <mat-select-trigger>
+          {{industryId ? 'Selected' : '' }}
+          <span *ngIf="industryId?.length > 0" class="additional-selection">
+            ({{industryId.length}} {{industryId?.length === 1 ? 'item' : 'items'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let i of jobDis" value="{{i.discipline_num}}">{{i.discipline_name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col-2">
+      <mat-label>Location</mat-label>
+      <mat-select [(ngModel)]="locationId" multiple>
+        <mat-select-trigger>
+          {{locationId ? 'Selected' : '' }}
+          <span *ngIf="locationId?.length > 0" class="additional-selection">
+            ({{locationId.length}} {{locationId?.length === 1 ? 'item' : 'items'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let i of jobLoc" value="{{i.location_num}}">{{i.location_name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col-2">
+      <mat-label>All Work Types</mat-label>
+      <mat-select [(ngModel)]="typeId" multiple>
+        <mat-select-trigger>
+          {{typeId ? 'Selected' : '' }}
+          <span *ngIf="typeId?.length > 0" class="additional-selection">
+            ({{typeId.length}} {{typeId?.length === 1 ? 'item' : 'items'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let i of jobType" value="{{i.type_num}}">{{i.type_name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col-2">
+      <mat-label>Sort by</mat-label>
+      <mat-select [(ngModel)]="sortId">
+        <mat-option value="">Relevance</mat-option>
+        <mat-option value="crawled_at">Post date</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="col-1 btn-css" style="padding-left:0;">
+      <button mat-raised-button style="background-color: #0099FF; color: #fff" (click)="onSearch()">Search</button>
     </div>
   </div>
-  <div class="err-bar" *ngIf="errorMessage">
-    <h1>{{errorMessage}}</h1>
-  </div>
-  
+</div>
+<div class="err-bar" *ngIf="errorMessage">
+  <h1>{{errorMessage}}</h1>
+</div>

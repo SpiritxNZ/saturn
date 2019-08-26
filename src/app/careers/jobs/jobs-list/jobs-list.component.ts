@@ -16,8 +16,11 @@ export class JobsListComponent implements OnInit {
   public lengthTotal: any;
   public keyword = '';
   public industry = '';
-  public location = '';
+  public industryName = '';
+  public location = "";
+  public locationName = [];
   public type = '';
+  public typeName = '';
   public sortBy = '';
   public currentPage = 1;
   public itemId: any;
@@ -44,13 +47,14 @@ export class JobsListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAddressValue();
+    // this.getAddressValue();
+    this.getSelectedItems();
     this.compoHeight();
   }
 
   compoHeight() {
     this.innerHeight = window.innerHeight;
-    this.listingHeight = this.innerHeight - 185
+    this.listingHeight = this.innerHeight - 185;
   }
 
   //the function of the middle click
@@ -80,8 +84,23 @@ export class JobsListComponent implements OnInit {
     this.storeValueService.setQueryParams('page', this.currentPage);
   }
 
+  getSelectedItems() {
+    this.contentservice.dropDownItems().subscribe(
+      (res) => {
+        if (res.dataCon) {
+          this.getAddressValue(res.dataCon);
+        } else {
+          this.errorMessage = "Error! Can't catch Data."
+        }
+      },
+      (err) => {
+        this.backendErrorHandler(err);
+      }
+    )
+  }
+
   // listen the changeof Url in real time
-  getAddressValue() {
+  getAddressValue(datacon) {
     this.activatedRoute.queryParams.subscribe(
       (res) => {
         if (res.searchString) {
@@ -94,6 +113,11 @@ export class JobsListComponent implements OnInit {
         }
         if (res.locationNum) {
           this.location = res.locationNum;
+          for(let i = 0; i < this.location.length; i++){
+            if(this.location[i] == datacon.job_location[i].location_num) {
+              this.locationName[i] = datacon.job_location[i].location_name;
+            }
+          }
         }
         if (res.typeNum) {
           this.type = res.typeNum;

@@ -2,6 +2,10 @@
   padding: 0 3rem;
 }
 
+.mat-card-header-text {
+  width: 100%;
+}
+
 .content {
   margin-top: 4rem;
   margin-bottom: 3rem;
@@ -12,8 +16,8 @@
 }
 
 .job-apply {
-  margin-left: 4rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+  /* margin-bottom: 1rem; */
 }
 
 .job-apply .job-apply-button {
