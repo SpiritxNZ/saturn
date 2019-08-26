@@ -7,7 +7,7 @@
       <span *ngIf="keyword">
         {{keyword}} in 
       </span>
-      <span *ngIf="location" title="{{locationName}}"><b>Locations</b> of </span>
+      <span *ngIf="location.length !== 0" title="{{locationName}}"><b>Locations</b> of </span>
       New Zealand
       <div class="font-mini" *ngIf="lengthTotal">
         {{lengthTotal}} results

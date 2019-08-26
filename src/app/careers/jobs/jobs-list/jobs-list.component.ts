@@ -113,9 +113,13 @@ export class JobsListComponent implements OnInit {
         }
         if (res.locationNum) {
           this.location = res.locationNum;
-          for(let i = 0; i < this.location.length; i++){
-            if(this.location[i] == datacon.job_location[i].location_num) {
-              this.locationName[i] = datacon.job_location[i].location_name;
+          if (this.locationName[0]) {
+            this.locationName = [];
+          } else {
+            for (let i = 0; i < this.location.length; i++) {
+              if (this.location[i] == datacon.job_location[i].location_num) {
+                this.locationName[i] = datacon.job_location[i].location_name;
+              }
             }
           }
         }
