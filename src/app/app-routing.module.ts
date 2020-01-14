@@ -22,6 +22,7 @@ import { BlogArticleComponent } from './blog/blog-article/blog-article.component
 import { ProgramDataanalystComponent } from './programs/program-dataanalyst/program-dataanalyst.component';
 import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.component';
 import { JobsPanelComponent } from './careers/jobs/jobs-panel/jobs-panel.component';
+import { JobIntellHomeComponent } from './careers/job-intell/job-intell-home/job-intell-home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'en/home', pathMatch: 'full' },
@@ -42,11 +43,10 @@ const routes: Routes = [
   { path: ':lang/program-tester', component: ProgramTesterComponent },
   { path: ':lang/application', component: ApplicationComponent },
   { path: ':lang/faq', component: FaqComponent },
-    // { path: ':lang/courses-home', component: CourseshomeComponent },
-  // { path: ':lang/courses', component: CoursesComponent },
-  // { path:':lang/courses/:id', component:CoursesComponent },
+
   { path: ':lang/jobs', component: JobsPanelComponent },
   { path: ':lang/jobdetail', component: JobsDetailComponent },
+  { path: ':lang/jobintell', component: JobIntellHomeComponent },
 
   { path: '**', component: PageNotFoundComponent }
 ];

@@ -29,4 +29,12 @@ export class CareerApiServiceService {
   getItemDetail(id){
     return this.http.get<any>(this.baseUrl + "/findjobs/" + id)
   }
+
+  getJobLocationIntelligence(){
+    return this.http.get<any>(this.baseUrl + "/location");
+  }
+
+  getJobKeywordIntelligence(){
+    return this.http.get<any>(this.baseUrl + "/keyword");
+  }
 }

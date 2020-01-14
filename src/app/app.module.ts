@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule, MatCardModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatCheckboxModule, MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatChipsModule, MatDividerModule, MatExpansionModule, MatGridListModule, MatIconModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatNativeDateModule, DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatPaginatorModule } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts';
 
 // import ngx-translate and the http loader
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -41,6 +42,8 @@ import { JobsSearchbarComponent } from './careers/jobs/jobs-searchbar/jobs-searc
 import { JobsListComponent } from './careers/jobs/jobs-list/jobs-list.component';
 import { JobsDescriptionComponent } from './careers/jobs/jobs-description/jobs-description.component';
 import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.component';
+import { JobIntellHomeComponent } from './careers/job-intell/job-intell-home/job-intell-home.component';
+import { JobIntellChartDialogComponent } from './careers/job-intell/job-intell-chart-dialog/job-intell-chart-dialog.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +73,8 @@ import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.comp
     JobsListComponent,
     JobsDescriptionComponent,
     JobsDetailComponent,
+    JobIntellHomeComponent,
+    JobIntellChartDialogComponent
   ],
 
 
@@ -80,6 +85,7 @@ import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.comp
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ChartsModule,
     MatNativeDateModule, MatSelectModule, MatDividerModule, MatCardModule, MatDialogModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatBadgeModule, MatCheckboxModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatChipsModule, MatDividerModule, MatPaginatorModule, MatExpansionModule, MatGridListModule, MatIconModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule,
 
     TranslateModule.forRoot({
@@ -89,6 +95,9 @@ import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.comp
         deps: [HttpClient]
       }
     }),
+  ],
+  entryComponents: [
+    JobIntellChartDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

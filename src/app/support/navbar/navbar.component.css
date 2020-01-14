@@ -1,38 +1,7 @@
-.whiteB{background-color: white;}
-.blackB{background-color: black;}
-.transB{background-color: transparent;}
-.transB1{background-color: rgba(0,0,0,0.2);}
-.whiteF{color: white;}
-.blackF{color: #0099FF;}
-
-.icon
-{
-    height: 45px;
-    width: 45px;
-    position: relative;
-}
-
-
-
-.backgColor2{background-color: transparent;}
-.borderColor1{border: 1px solid #cccccc;}
-.borderColor2{border: 0;}
-.fontColor1{color: #0099FF;}
-.fontColor2{color: white;}
-.fontColor3{color: #424242;}
-
-.dropdown-item {
-    margin-left: 5px;
-    background-color: transparent;
+.logoFont{
     font-family: Coltan-Gea-Bold;
+    font-size:26px;
 }
-.navLink{font-family: Coltan-Gea-Bold !important;}
-.dropdown-item:active {
-    color:black;
-}
-@media(max-width:768px) {
-    .dropdown-menu {
-        border:none;
-        border-radius: 0;
-    }
+.navLink{
+    font-family: Coltan-Gea-Bold !important;
 }
