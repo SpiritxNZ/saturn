@@ -13,7 +13,7 @@ import { CareerApiServiceService } from 'src/app/services/career-api-service.ser
 
 
 export class JobIntellHomeComponent implements OnInit {
-  public chartData = {}
+  public chartData :any;
   public chartLabelLocation = ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'];
   public chartDataLocation = [{data:[120, 150, 180, 90], label: 'September 2019'}];
   public chartTypeLocation = 'doughnut';

@@ -245,3 +245,14 @@ li.nav-item:hover
     }
 }
 
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+
+.nav-tabs {
+    text-align:center;
+}
+    

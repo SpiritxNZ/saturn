@@ -47,7 +47,50 @@ videoPersons: any[] = [
     jobLoc: 'Parkable',
     description: `Pirlo came to us in July 2017. While at Gradspace, 
     Pirlo learnt the Angular framework, NodeJS and used them to create a commercial web based chatting application.`
-  }
+  },
+  {
+    video: 'https://www.youtube.com/embed/3rf8ELUexZ4',
+    name: 'Barric',
+    uni: 'Auckland University',
+    job: 'Intermediate Developer',
+    jobLoc: 'Moustache Republic',
+    description: `Barric was a student at Gradspace from March to August 2019. He had no prior experience or any studies done in the IT industry.`
+  },
+  {
+    video: 'https://www.youtube.com/embed/8ricRVOUFp4',
+    name: 'David',
+    uni: 'Auckland University',
+    job: 'Front-End Developer',
+    jobLoc: 'Parkable',
+    description: `David came to us right after he finished up his university studies in Jan 2019. He left in March 2019 to get his current role.`
+  },
+  {
+    video: 'https://www.youtube.com/embed/yJEpVApliTE',
+    name: 'Kevin',
+    uni: 'Auckland University',
+    job: 'Full Stack Developer',
+    jobLoc: 'Marsello',
+    description: `Kevin started here when he was still a student at Auckland Uni back in 2018. As a fresh university graduate, he had no prior work experience in the industry.`
+  },
+  {
+    video: 'https://www.youtube.com/embed/3ZKdbkL4A1A',
+    name: 'Chris',
+    uni: 'Unitec',
+    job: 'Junior Developer',
+    jobLoc: 'Oppo',
+    description: `Chris attended Gradspace from March 2019 to September 2019. He had no prior experience in the IT industry.  `
+  },
+  {
+    video: 'https://www.youtube.com/embed/XD_LmcZErqE',
+    name: 'Jesse',
+    uni: 'Massey University',
+    job: 'Junior Developer',
+    jobLoc: 'Brunton NZ',
+    description: `Jesse came to Gradspace in May 2019 and secured his offer in October 2019.  He had no prior work experience in NZ.`
+  },
+
+
+
 ];
 
 
