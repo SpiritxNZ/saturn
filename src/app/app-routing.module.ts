@@ -23,6 +23,8 @@ import { ProgramDataanalystComponent } from './programs/program-dataanalyst/prog
 import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.component';
 import { JobsPanelComponent } from './careers/jobs/jobs-panel/jobs-panel.component';
 import { JobIntellHomeComponent } from './careers/job-intell/job-intell-home/job-intell-home.component';
+import { CVBuilderComponent } from './learner/cvbuilder/cvbuilder.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'en/home', pathMatch: 'full' },
@@ -47,7 +49,7 @@ const routes: Routes = [
   { path: ':lang/jobs', component: JobsPanelComponent },
   { path: ':lang/jobdetail', component: JobsDetailComponent },
   { path: ':lang/jobintell', component: JobIntellHomeComponent },
-
+  { path: ':lang/cv', component: CVBuilderComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

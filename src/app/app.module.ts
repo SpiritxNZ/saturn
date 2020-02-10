@@ -44,6 +44,9 @@ import { JobsDescriptionComponent } from './careers/jobs/jobs-description/jobs-d
 import { JobsDetailComponent } from './careers/jobs/jobs-detail/jobs-detail.component';
 import { JobIntellHomeComponent } from './careers/job-intell/job-intell-home/job-intell-home.component';
 import { JobIntellChartDialogComponent } from './careers/job-intell/job-intell-chart-dialog/job-intell-chart-dialog.component';
+import { CVBuilderComponent } from './learner/cvbuilder/cvbuilder.component';
+import { CVViewDialogComponent } from './learner/cv-view-dialog/cv-view-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -74,7 +77,9 @@ import { JobIntellChartDialogComponent } from './careers/job-intell/job-intell-c
     JobsDescriptionComponent,
     JobsDetailComponent,
     JobIntellHomeComponent,
-    JobIntellChartDialogComponent
+    JobIntellChartDialogComponent,
+    CVBuilderComponent,
+    CVViewDialogComponent
   ],
 
 
@@ -97,7 +102,8 @@ import { JobIntellChartDialogComponent } from './careers/job-intell/job-intell-c
     }),
   ],
   entryComponents: [
-    JobIntellChartDialogComponent
+    JobIntellChartDialogComponent,
+    CVViewDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
